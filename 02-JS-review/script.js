@@ -183,7 +183,7 @@ function getBook(id) {
 
 // console.log(getTotalReviewCount(book));
 
-// map, filter, reduce
+// map
 const books = getBooks();
 
 const x = [1, 2, 3, 4, 5].map((x) => x * 2);
@@ -198,3 +198,18 @@ const essentialData = books.map((book) => ({
 }));
 
 console.log(essentialData);
+
+// sort - MUDA O ARRAY ORIGINAL
+const arr = [3, 7, 1, 9, 6];
+const sorted = arr.sort((a, b) => a - b);
+console.log(sorted);
+console.log(arr);
+
+// MANTENDO O ARRAY ORIGINAL
+const arr2 = [3, 7, 1, 9, 6];
+const cloneSorted = arr2.slice().sort((a, b) => a - b);
+console.log(arr2);
+
+// ORDENANDO POR PROPRIEDADE
+const sortedByPages = books.slice().sort((a, b) => b.pages - a.pages);
+console.log(sortedByPages);
