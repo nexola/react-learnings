@@ -155,12 +155,21 @@ console.log(otherGenres);
 
 const newGenres = [...genres, "epic fantasy"];
 
-newGenres;
-
 const updateBook = {
   ...book,
   moviePublicationDate: 2001,
   pages: 1210,
 };
 
-updateBook;
+const summary = `${title} is a book`;
+summary;
+
+// Short circuit
+const spanishTranslation = book.translations.spanish || "NOT TRANSLATED";
+console.log(spanishTranslation);
+
+const countWrong = book.reviews.librarything.reviewsCount || "no data";
+console.log(countWrong);
+
+const count = book.reviews.librarything.reviewsCount ?? "no data";
+console.log(count);
