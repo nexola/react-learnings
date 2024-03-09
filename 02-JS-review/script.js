@@ -213,3 +213,22 @@ console.log(arr2);
 // ORDENANDO POR PROPRIEDADE
 const sortedByPages = books.slice().sort((a, b) => b.pages - a.pages);
 console.log(sortedByPages);
+
+// TRABALHANDO COM ARRAYS IMUTÁVEIS
+// 1 - Add a book
+const newBook = {
+  id: 6,
+  title: "Spider-man 2",
+  author: "Stan Lee",
+};
+const booksAfterAdd = [...books, newBook];
+console.log(booksAfterAdd);
+// 2 - Delete a book
+const booksAfterDelete = booksAfterAdd.filter((book) => book.id !== 3);
+console.log(booksAfterDelete);
+
+// 3 - Update a book
+const booksAfterUpdate = booksAfterDelete.map((book) =>
+  book.id === 1 ? { ...book, pages: 1950 } : book
+);
+console.log(books);
