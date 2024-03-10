@@ -183,52 +183,56 @@ function getBook(id) {
 
 // console.log(getTotalReviewCount(book));
 
-// map
-const books = getBooks();
+// // map
+// const books = getBooks();
 
-const x = [1, 2, 3, 4, 5].map((x) => x * 2);
-console.log(x);
+// const x = [1, 2, 3, 4, 5].map((x) => x * 2);
+// console.log(x);
 
-const titles = books.map((book) => book.title);
-console.log(titles);
+// const titles = books.map((book) => book.title);
+// console.log(titles);
 
-const essentialData = books.map((book) => ({
-  title: book.title,
-  author: book.author,
-}));
+// const essentialData = books.map((book) => ({
+//   title: book.title,
+//   author: book.author,
+// }));
 
-console.log(essentialData);
+// console.log(essentialData);
 
-// sort - MUDA O ARRAY ORIGINAL
-const arr = [3, 7, 1, 9, 6];
-const sorted = arr.sort((a, b) => a - b);
-console.log(sorted);
-console.log(arr);
+// // sort - MUDA O ARRAY ORIGINAL
+// const arr = [3, 7, 1, 9, 6];
+// const sorted = arr.sort((a, b) => a - b);
+// console.log(sorted);
+// console.log(arr);
 
-// MANTENDO O ARRAY ORIGINAL
-const arr2 = [3, 7, 1, 9, 6];
-const cloneSorted = arr2.slice().sort((a, b) => a - b);
-console.log(arr2);
+// // MANTENDO O ARRAY ORIGINAL
+// const arr2 = [3, 7, 1, 9, 6];
+// const cloneSorted = arr2.slice().sort((a, b) => a - b);
+// console.log(arr2);
 
-// ORDENANDO POR PROPRIEDADE
-const sortedByPages = books.slice().sort((a, b) => b.pages - a.pages);
-console.log(sortedByPages);
+// // ORDENANDO POR PROPRIEDADE
+// const sortedByPages = books.slice().sort((a, b) => b.pages - a.pages);
+// console.log(sortedByPages);
 
-// TRABALHANDO COM ARRAYS IMUTÁVEIS
-// 1 - Add a book
-const newBook = {
-  id: 6,
-  title: "Spider-man 2",
-  author: "Stan Lee",
-};
-const booksAfterAdd = [...books, newBook];
-console.log(booksAfterAdd);
-// 2 - Delete a book
-const booksAfterDelete = booksAfterAdd.filter((book) => book.id !== 3);
-console.log(booksAfterDelete);
+// // TRABALHANDO COM ARRAYS IMUTÁVEIS
+// // 1 - Add a book
+// const newBook = {
+//   id: 6,
+//   title: "Spider-man 2",
+//   author: "Stan Lee",
+// };
+// const booksAfterAdd = [...books, newBook];
+// console.log(booksAfterAdd);
+// // 2 - Delete a book
+// const booksAfterDelete = booksAfterAdd.filter((book) => book.id !== 3);
+// console.log(booksAfterDelete);
 
-// 3 - Update a book
-const booksAfterUpdate = booksAfterDelete.map((book) =>
-  book.id === 1 ? { ...book, pages: 1950 } : book
-);
-console.log(books);
+// // 3 - Update a book
+// const booksAfterUpdate = booksAfterDelete.map((book) =>
+//   book.id === 1 ? { ...book, pages: 1950 } : book
+// );
+// console.log(books);
+
+fetch("https://jsonplaceholder.typicode.com/todos/1")
+  .then((res) => res.json())
+  .then((json) => console.log(json));
