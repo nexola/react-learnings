@@ -35,10 +35,10 @@ function Intro() {
 function SkillList() {
   return (
     <ul className="skill-list">
-      <Skill name="HTML" emoji="🦾" bg-color="orange" />
-      <Skill name="CSS" emoji="👊" bg-color="blue" />
-      <Skill name="JavaScript" emoji="🤖" bg-color="yellow" />
-      <Skill name="React" emoji="⚛️" bg-color="purple" />
+      <Skill name="HTML" emoji="🦾" bgColor="orange" />
+      <Skill name="CSS" emoji="👊" bgColor="blue" />
+      <Skill name="JavaScript" emoji="🤖" bgColor="yellow" />
+      <Skill name="React" emoji="⚛️" bgColor="purple" />
     </ul>
   );
 }
